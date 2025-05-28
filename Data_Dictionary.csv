@@ -1,0 +1,25 @@
+Field_Name,Data_Type,Description,Use_Case
+InvoiceNo,Text,Invoice number - unique identifier for each transaction,"Transaction identification, Order analysis"
+StockCode,Text,Product stock code,"Product analysis, Inventory tracking"
+Description,Text,Product description,"Product analysis, Text mining"
+Quantity,Number,Quantity of products purchased (cleaned: >= 1),"Sales volume analysis, Demand forecasting"
+InvoiceDate,Date/Time,Date and time of invoice,"Time series analysis, Seasonality"
+UnitPrice,Currency,Unit price per product (cleaned: > 0),"Pricing analysis, Revenue calculation"
+CustomerID,Number,Customer ID number,"Customer segmentation, Retention analysis"
+Country,Text,Country where customer is located,"Geographic analysis, Market expansion"
+Revenue,Currency,Calculated field: Quantity × UnitPrice,"Revenue analysis, Profitability"
+Year,Number,Year extracted from InvoiceDate,"Annual trends, Year-over-year comparison"
+Month,Number,Month number (1-12) extracted from InvoiceDate,"Monthly trends, Seasonality"
+MonthName,Text,Month name extracted from InvoiceDate,"Seasonal analysis, Month comparison"
+Quarter,Number,Quarter (1-4) extracted from InvoiceDate,"Quarterly reporting, Business cycles"
+DayOfWeek,Text,Day of week name extracted from InvoiceDate,"Day-of-week patterns, Operational planning"
+Date,Date,Date only (without time) extracted from InvoiceDate,"Daily analysis, Calendar visualization"
+YearMonth,Text,Year-Month in YYYY-MM format,"Monthly trending, Period comparison"
+WeekOfYear,Number,Week number of the year,"Weekly patterns, Short-term trends"
+HasCustomerID,Boolean,Boolean: TRUE if CustomerID is not null,Customer data quality analysis
+CustomerID_Clean,Text,"CustomerID with nulls replaced by ""Unknown""",Customer analysis including unknowns
+StockCode_Category,Text,Category derived from StockCode letters,"Product categorization, SKU analysis"
+IsUK,Boolean,Boolean: TRUE if Country is United Kingdom,Domestic vs International analysis
+CountryGroup,Text,UK or International based on country,"Market segmentation, Geographic focus"
+Revenue_Category,Text,Revenue grouped into categories,"Revenue segmentation, Value analysis"
+Quantity_Category,Text,Quantity grouped into categories,"Order size analysis, Bulk vs Retail"
